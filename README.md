@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/banner.png" alt="GlassyFolio Project Banner" width="100%">
+  <img src="./public/banner.png" alt="Professional portfolio Project Banner" width="100%">
 </p>
 <div align="center">
 
@@ -69,7 +69,7 @@ Included by default is a realistic, fictional Sri Lankan developer persona (**Ka
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Sewmina-as/sewmina-portfolio.git
+   git clone https://github.com/Sewmina-as/Professional-portfolio-for-developers.git
    cd sewmina-portfolio
    ```
 
