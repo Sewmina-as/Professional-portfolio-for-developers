@@ -70,7 +70,7 @@ Included by default is a realistic, fictional Sri Lankan developer persona (**Ka
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Sewmina-as/Professional-portfolio-for-developers.git
-   cd sewmina-portfolio
+   cd ProfessionalPortfolio
    ```
 
 2. **Install dependencies:**
