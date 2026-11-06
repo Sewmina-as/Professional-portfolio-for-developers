@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="./public/banner.png" alt="GlassyFolio Project Banner" width="100%">
+</p>
 <div align="center">
 
 # 🚀 Next.js Developer Portfolio Template
