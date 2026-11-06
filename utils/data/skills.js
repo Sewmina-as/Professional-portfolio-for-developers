@@ -1,0 +1,21 @@
+// Names must match an icon in utils/skill-image.js (e.g. 'Next JS', 'Sklearn', 'Pytorch').
+export const skillsData = [
+  'Python',
+  'Java',
+  'FastAPI',
+  'React',
+  'Next JS',
+  'Javascript',
+  'Typescript',
+  'PostgreSQL',
+  'MySQL',
+  'Pytorch',
+  'Tensorflow',
+  'Sklearn',
+  'Pandas',
+  'Numpy',
+  'Tailwind',
+  'Docker',
+  'Git',
+  'Linux',
+]

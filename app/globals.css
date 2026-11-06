@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Local fonts: no CDN. Files live in /public/fonts */
+@font-face { font-family: "Inter"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/Inter-Regular.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/Inter-Medium.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/Inter-SemiBold.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/InterDisplay-Medium.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/InterDisplay-SemiBold.woff") format("woff"); }
+@font-face { font-family: "Inter Display"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/InterDisplay-Bold.woff") format("woff"); }
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #060914;
+  --color-surface: #0b1022;
+  --color-raised: #11173188;
+  --color-panel: #111731;
+  --color-line: #1e2647;
+  --color-text: #e9ebf7;
+  --color-muted: #9aa2c7;
+  --color-violet: #804dee;
+  --color-violet-soft: #b9a1ff;
+  --color-signal: #5eead4;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: rgba(128, 77, 238, 0.45); color: #fff; }
+
+:focus-visible { outline: 2px solid var(--color-violet-soft); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: min(100% - 3rem, 72rem); margin-inline: auto; }
+@media (min-width: 640px) { .wrap { width: min(100% - 5rem, 72rem); } }
+
+.glass {
+  background: rgba(11, 16, 34, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.accent-line { background: linear-gradient(90deg, var(--color-violet), rgba(128, 77, 238, 0)); }
+.accent-fill { background: linear-gradient(135deg, #804dee, #6a3fd1); }
+
+/* Skills marquee */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* Background line drift */
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-70px); } }
+.bg-drift { animation: drift 28s ease-in-out infinite alternate; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track, .bg-drift { animation: none; }
+}
